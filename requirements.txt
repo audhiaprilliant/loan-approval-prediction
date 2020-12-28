@@ -4,3 +4,7 @@ numpy
 joblib
 scikit-learn
 gunicorn
+Jinja2
+Werkzeug
+distribute
+wsgiref
