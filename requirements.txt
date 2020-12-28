@@ -11,12 +11,10 @@ cachetools==4.2.0
 certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
-cloud-init==20.2
 colorama==0.4.3
 command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
-cryptography==2.8
 dbus-python==1.2.16
 distlib==0.3.0
 distro==1.4.0
