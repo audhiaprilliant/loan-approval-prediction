@@ -5,10 +5,14 @@ import numpy as np
 import joblib
 import pickle
 import json
+import os
+
+# Current directory
+current_dir = os.path.dirname(__file__)
 
 # Function
 def ValuePredictor(to_predict_list):
-    loaded_model = joblib.load(open('model/xgboostModel.pkl','rb'))
+    loaded_model = joblib.load(open(os.path.join(current_dir,'model/xgboostModel.pkl'),'rb'))
     result = loaded_model.predict(to_predict_list)
     return result[0]
 
@@ -39,7 +43,7 @@ def predict():
 	    property_area = request.form['Property_Area']
 	    
 	    # Load JSON file of columns name
-	    with open('bin/columns.json', 'r') as f:
+	    with open(os.path.join(current_dir,'bin/columns.json'), 'r') as f:
 	    	cols =  json.loads(f.read())
 	    cols = cols['data_columns']
 
