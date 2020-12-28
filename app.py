@@ -16,6 +16,7 @@ app = Flask(__name__)
 
 # Index page
 @app.route('/')
+@app.route('/index')
 def home():
     return render_template('home.html')
 
@@ -68,11 +69,11 @@ def predict():
 
 	    # Change columns name
 	    df.columns = cols
-	
+	   
 	    # Create prediction
-	    result = ValuePredictor(df)
+	    result = ValuePredictor(df)	   
 	    if int(result) == 1:
-	        prediction = 'Dear Mr/Mrs/Ms {first}, your loan is granted!'.format(first = first_name)
+	        prediction = 'Dear Mr/Mrs/Ms {first}, your loan is approved!'.format(first = first_name)
 	    else:
-	        prediction = 'Sorry Mr/Mrs/Ms {first}, your loan is not granted!'.format(first = first_name)
+	        prediction = 'Sorry Mr/Mrs/Ms {first}, your loan is rejected!'.format(first = first_name)
 	    return render_template('result.html', prediction = prediction)
