@@ -17,7 +17,6 @@ constantly==15.1.0
 dbus-python==1.2.16
 distlib==0.3.0
 distro==1.4.0
-distro-info===0.23ubuntu1
 dlib==19.21.1
 dominate==2.6.0
 entrypoints==0.3
@@ -80,9 +79,7 @@ pyOpenSSL==19.0.0
 pyparsing==2.4.7
 pyrsistent==0.15.5
 pyserial==3.4
-python-apt==2.0.0+ubuntu0.20.4.1
 python-dateutil==2.8.1
-python-debian===0.1.36ubuntu1
 pytz==2020.4
 PyYAML==5.3.1
 requests==2.22.0
@@ -111,7 +108,6 @@ traceback2==1.4.0
 Twisted==18.9.0
 typing==3.7.4.3
 typing-extensions==3.7.4.3
-ubuntu-advantage-tools==20.3
 ufw==0.36
 unattended-upgrades==0.1
 unittest2==1.1.0
