@@ -68,11 +68,9 @@ def predict():
 
 	    # Change columns name
 	    df.columns = cols
-	    print(df.iloc[0])
-	    print(df.info())
+	
 	    # Create prediction
 	    result = ValuePredictor(df)
-	    print(result)
 	    if int(result) == 1:
 	        prediction = 'Dear Mr/Mrs/Ms {first}, your loan is granted!'.format(first = first_name)
 	    else:
