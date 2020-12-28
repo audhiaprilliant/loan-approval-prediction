@@ -39,7 +39,7 @@ def predict():
 	    property_area = request.form['Property_Area']
 	    
 	    # Load JSON file of columns name
-	    with open('../bin/columns.json', 'r') as f:
+	    with open('bin/columns.json', 'r') as f:
 	    	cols =  json.loads(f.read())
 	    cols = cols['data_columns']
 
