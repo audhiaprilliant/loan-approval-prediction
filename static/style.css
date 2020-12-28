@@ -14,6 +14,7 @@ h1 {
   position: absolute;
   margin: 0;
   font-size: 32px;
+  line-height:32px;
   color: #fff;
   z-index: 2;
 }
