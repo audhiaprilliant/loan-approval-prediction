@@ -3,4 +3,4 @@ flask
 numpy
 joblib
 scikit-learn
-xgboost
+gunicorn
