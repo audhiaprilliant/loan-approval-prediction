@@ -11,10 +11,10 @@ body, div, form, input, select, textarea, p {
   line-height: 22px;
 }
 h1 {
-  position: absolute;
+  position: static;
   margin: 0;
   font-size: 32px;
-  line-height:32px;
+  line-height:38px;
   color: #fff;
   z-index: 2;
 }
