@@ -107,7 +107,6 @@ traceback2==1.4.0
 Twisted==18.9.0
 typing==3.7.4.3
 typing-extensions==3.7.4.3
-ufw==0.36
 unattended-upgrades==0.1
 unittest2==1.1.0
 urllib3==1.25.8
