@@ -2,7 +2,6 @@ pandas
 flask
 numpy
 joblib
-pickle
 json
 scikit-learn
 xgboost
