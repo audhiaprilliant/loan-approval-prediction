@@ -16,11 +16,10 @@ def ValuePredictor(to_predict_list):
     result = loaded_model.predict(to_predict_list)
     return result[0]
 
-app = Flask(__name__, static_folder = '/static', template_folder = 'templates')
+app = Flask(__name__, static_folder = 'static', template_folder = 'templates')
 
 # Index page
 @app.route('/')
-@app.route('/index')
 def home():
     return render_template('home.html')
 
