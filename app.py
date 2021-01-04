@@ -2,21 +2,28 @@
 from flask import Flask, render_template, url_for, request
 import pandas as pd
 import numpy as np
+import logging
 import joblib
 import pickle
 import json
+import sys
 import os
+
+# Logging
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 # Current directory
 current_dir = os.path.dirname(__file__)
+
+# Flask app
+app = Flask(__name__, static_folder = 'static', template_folder = 'templates')
 
 # Function
 def ValuePredictor(to_predict_list):
     loaded_model = joblib.load(open(os.path.join(current_dir,'model/xgboostModel.pkl'),'rb'))
     result = loaded_model.predict(to_predict_list)
     return result[0]
-
-app = Flask(__name__, static_folder = 'static', template_folder = 'templates')
 
 # Index page
 @app.route('/')
