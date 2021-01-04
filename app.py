@@ -17,7 +17,6 @@ def ValuePredictor(to_predict_list):
     return result[0]
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
 
 # Index page
 @app.route('/')
@@ -84,4 +83,4 @@ def predict():
 	    return render_template('result.html', prediction = prediction)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)
