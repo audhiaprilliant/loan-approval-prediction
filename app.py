@@ -9,15 +9,14 @@ import json
 import sys
 import os
 
-# Logging
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
 # Current directory
 current_dir = os.path.dirname(__file__)
 
 # Flask app
 app = Flask(__name__, static_folder = 'static', template_folder = 'templates')
+# Logging
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 # Function
 def ValuePredictor(to_predict_list):
