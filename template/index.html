@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Approval Prediction</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Applicant form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Loan Approval</h2>
+                        <form action="/prediction" method="POST" class="register-form" id="register-form">
+                            <h3>Identity</h3>
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                            </div>
+                            <!-- Birthdate -->
+                            <div class="form-group">
+                                <label for="birthdate"><i class="zmdi zmdi-calendar"></i></label>
+                                <input type="date" name="birthdate" id="birthdate" placeholder="Your Birthdate" required/>
+                            </div>
+                            <!-- Gender -->
+                            <div class="form-group">
+                                <label for="gender"><i class="zmdi zmdi-accounts"></i></label>
+                                <select name="gender" id="gender" placeholder="Your Gender" required>
+                                    <option value="" disabled selected>Your Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                            </div>
+                            <!-- Education -->
+                            <div class="form-group">
+                                <label for="education"><i class="zmdi zmdi-book"></i></label>
+                                <select name="education" id="education" placeholder="Your Education" required>
+                                    <option value="" disabled selected>Your Education</option>
+                                    <option value="1">Not Graduate</option>
+                                    <option value="0">Graduate</option>
+                                </select>
+                            </div>
+                            <!-- Self Employed -->
+                            <div class="form-group">
+                                <label for="self_employed"><i class="zmdi zmdi-case"></i></label>
+                                <select name="self_employed" id="self_employed" placeholder="Are You Employed?" required>
+                                    <option value="" disabled selected>Are You Employed?</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <!-- Marital Status -->
+                            <div class="form-group">
+                                <label for="marital_status"><i class="zmdi zmdi-accounts-alt"></i></label>
+                                <select name="marital_status" id="marital_status" placeholder="Your Marital Status" required>
+                                    <option value="" disabled selected>Your Marital Status</option>
+                                    <option value="0">Single</option>
+                                    <option value="1">Married</option>
+                                </select>
+                            </div>
+                            <!-- Dependents -->
+                            <div class="form-group">
+                                <label for="dependents"><i class="zmdi zmdi-accounts-add"></i></label>
+                                <select name="dependents" id="dependents" placeholder="Number of Dependents" required>
+                                    <option value="" disabled selected>Number of Dependents</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3+">3+</option>
+                                </select>
+                            </div>
+                            <!-- Property Area -->
+                            <div class="form-group">
+                                <label for="property_area"><i class="zmdi zmdi-home"></i></label>
+                                <select name="property_area" id="property_area" placeholder="Your Property Area" required>
+                                    <option value="" disabled selected>Your Property Area</option>
+                                    <option value="Urban">Urban</option>
+                                    <option value="Semiurban">Semi-Urban</option>
+                                    <option value="Rural">Rural</option>
+                                </select>
+                            </div>
+                            <!-- Applicant Income per Month -->
+                            <div class="form-group">
+                                <label for="applicant_income"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="applicant_income" placeholder="Applicant Income per Month (USD)" required/>
+                            </div>
+                            <!-- Co-Applicant Income per Month -->
+                            <div class="form-group">
+                                <label for="coapplicant_income"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="coapplicant_income" placeholder="Co-Applicant Income per Month (USD)" required/>
+                            </div>
+                            <h3>Loan and Credit Description</h3>
+                            <!-- Loan Amount -->
+                            <div class="form-group">
+                                <label for="loan_amount"><i class="zmdi zmdi-money"></i></label>
+                                <input type="number" min="0" name="loan_amount" placeholder="Your Loan Amount (USD)" required/>
+                            </div>
+                            <!-- Loan Amount Term -->
+                            <div class="form-group">
+                                <label for="loan_term"><i class="zmdi zmdi-calendar-check"></i></label>
+                                <input type="number" min="0" name="loan_term" placeholder="Your Loan Term (days)" required/>
+                            </div>
+                            <!-- Credit History -->
+                            <div class="form-group">
+                                <label for="credit_history"><i class="zmdi zmdi-calendar-check"></i></label>
+                                <select name="credit_history" id="credit_history" placeholder="Your Credit History" required>
+                                    <option value="" disabled selected>Your Credit History</option>
+                                    <option value="1">All Debts Paid</option>
+                                    <option value="0">Not paid</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Check Status"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../static/images/signup-image.jpg" alt="sing up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </div>
+
+</body>
+</html>

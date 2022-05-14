@@ -1,0 +1,3 @@
+# Ignore artifacts
+__pycache__/*
+notebook/__pycache__/*

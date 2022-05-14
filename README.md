@@ -1,4 +1,4 @@
-# Loan Prediction Form
+# Loan Approval Prediction
 
 ### Content
 A loan application is used by borrowers to apply for a loan. Through the loan application, borrowers reveal key details about their finances to the lender. The loan application is crucial to determining whether the lender will grant the request for funds or credit.
@@ -8,3 +8,6 @@ The director of SZE bank identified that going through the loan applications to 
 
 ### Objective
 The idea behind this ML project is to build an ML model and web application that the bank can use to classify if a user can be granted a loan or not.
+
+### Web template
+For the machine learning deployment, this app uses HTML and CSS templates of [colorlib](https://colorlib.com/wp/template/colorlib-regform-7/)
